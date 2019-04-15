@@ -19,7 +19,7 @@ export class Task3Component implements OnInit {
   setLogin(){
 
     this.log.setLoginUser(this.firstName, this.lastName, this.email, this.password);
-    console.log(log.getLoginUser());
+    console.log(this.log.getLoginUser());
   }
 
 
