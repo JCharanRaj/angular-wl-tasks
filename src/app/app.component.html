@@ -1,0 +1,48 @@
+<div class="bg-dark ">
+  <nav class="container navbar navbar-expand-sm">
+    <ul class="navbar-nav" >
+      
+      <li claass="nav-item"><a class="nav-link"  routerLink="/">Home</a></li>
+      
+      <li claass="nav-item" *ngFor="let task of tasks"><a class="nav-link"  routerLink="/{{task.taskName|lowercase}}">{{task.taskName}}</a></li>
+      <li claass="nav-item" ><a class="nav-link"  routerLink="/task3dashboard">Task3 Dashboard</a></li>
+    </ul>
+  </nav>
+</div>
+<div>
+
+
+</div>
+
+
+<div class="container">
+  <div class="addtask">
+    <input type="text" placeholder="Enter Task Name" class="form-control col-sm-4" [(ngModel)]="addTaskName"/><br/>
+    <textarea class=" form form-control col-sm-6" placeholder="Enter Task Discription" ></textarea><br/>
+    <button class="btn-primary btn" (click)="addTask()">Add Task</button>
+    
+    
+  </div>
+  <div>
+
+    <p>If Then Else condition</p>
+    <input type="checkbox" [(ngModel)]="checkBox"  name="checked" /><br/>
+    <p *ngIf="checkBox; then condition else condition1"></p>
+    <ng-template #condition1>Condition is false</ng-template>
+    <ng-template #condition>Condition is true</ng-template>
+  </div>
+
+  <div class="container router-view">
+    <router-outlet ></router-outlet>
+  </div>
+  
+</div>
+<div class="container">
+  <h3>Parent property in child component via @Input()</h3>
+  <app-task2 [name]="name"></app-task2>
+</div>
+
+<footer class="footer bg-dark">
+  Footer content..
+</footer>
+

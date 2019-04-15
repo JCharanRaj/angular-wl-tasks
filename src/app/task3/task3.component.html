@@ -1,0 +1,11 @@
+<p>
+task3 works!
+</p>
+<form class="form">
+  <label >First Name</label><input type="text" name="firstName"[(ngModel)]="firstName" class="form-control col-sm-6"/>
+  <label>Last Name</label><input type="text" name="lastName" [(ngModel)]="lastName" class="form-control col-sm-6"/>
+  <label>Email</label><input type="email" name="email"[(ngModel)]="email" class="form-control col-sm-6"/>
+  <label>Password</label><input type="password" name="password"[(ngModel)]="password" class="form-control col-sm-6"/><br/>
+  <button class="btn btn-success" (click)="setLogin()">Login</button>
+</form>
+

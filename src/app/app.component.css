@@ -1,0 +1,19 @@
+p {
+  font-family: Lato;
+}
+footer{
+  
+  color: #ffffff;
+  
+}
+.main-view{
+  background-color: #e2e0e0;
+}
+.router-view{
+  width:100%;
+  margin:20px;
+  background-color: #e2e0e0;
+}
+.addtask{
+  margin:10px;
+}
