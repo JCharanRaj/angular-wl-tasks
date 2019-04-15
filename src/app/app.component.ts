@@ -19,6 +19,7 @@ export class AppComponent {
   public name ="Task2 from App Component";
   checkBox:boolean;
   taskDes:string;
+  message="";
   task:any={};
   addTaskName:string;
   tasks=[{taskName:"Task1", taskDesc:"Task1 about adding elemantes dyamically!!"},

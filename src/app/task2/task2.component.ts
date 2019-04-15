@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-task2',
@@ -7,9 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class Task2Component implements OnInit {
   @Input() public name:string;
+  @Output() public message= new EventEmitter();
   constructor() { }
 
   ngOnInit() {
+  }
+  sendMessage(){
+    this.message.emit("Message from Tsak2 Component....");
   }
 
 }

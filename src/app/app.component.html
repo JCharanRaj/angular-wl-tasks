@@ -39,9 +39,9 @@
 </div>
 <div class="container">
   <h3>Parent property in child component via @Input()</h3>
-  <app-task2 [name]="name"></app-task2>
+  <app-task2 (message)="message=$event" [name]="name"></app-task2>
 </div>
-
+<h1>Hello {{message}}</h1>
 <footer class="footer bg-dark">
   Footer content..
 </footer>
