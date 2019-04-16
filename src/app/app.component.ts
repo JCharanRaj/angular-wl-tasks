@@ -44,7 +44,7 @@ export class AppComponent {
   sendUserData(){
     this.userData.push({"firstName":this.fname, "lastName":this.lname});
     console.log(this.userData);
-    this.router.n
+    
   }
   ngOnInit() {
        this.http.get("http://jsonplaceholder.typicode.com/users");
