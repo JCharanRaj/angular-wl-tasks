@@ -11,7 +11,6 @@ import { Task3Component } from './task3/task3.component';
 import { TestService } from './test.service';
 import { HomeComponent } from './home/home.component';
 import { SqrtPipe } from './sqrt.pipe';
-import { Task3dashboardComponent } from './task3dashboard/task3dashboard.component';
 
 
 const routes: Routes=[
@@ -19,11 +18,11 @@ const routes: Routes=[
   {path:"task1", component: Task1Component},
   {path:"task2", component: Task2Component},
   {path:"task3", component: Task3Component},
-  {path:"task3dashboard", component: Task3dashboardComponent}
+  
 ];
 @NgModule({
   imports:      [ BrowserModule,HttpClientModule, FormsModule, RouterModule.forRoot(routes) ],
-  declarations: [ AppComponent, Task2Component, Task1Component, Task3Component, HomeComponent, SqrtPipe, Task3dashboardComponent],
+  declarations: [ AppComponent, Task2Component, Task1Component, Task3Component, HomeComponent, SqrtPipe],
   bootstrap:    [ AppComponent ],
   providers: [TestService]
 })

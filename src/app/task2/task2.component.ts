@@ -6,7 +6,7 @@ import { Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
   styleUrls: ['./task2.component.css']
 })
 export class Task2Component implements OnInit {
-  @Input() public name:string;
+  @Input('userData') public userData:any[];
   @Output() public message= new EventEmitter();
   constructor() { }
 

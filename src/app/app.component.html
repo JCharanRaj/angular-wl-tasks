@@ -5,7 +5,7 @@
       <li claass="nav-item"><a class="nav-link"  routerLink="/">Home</a></li>
       
       <li claass="nav-item" *ngFor="let task of tasks"><a class="nav-link"  routerLink="/{{task.taskName|lowercase}}">{{task.taskName}}</a></li>
-      <li claass="nav-item" ><a class="nav-link"  routerLink="/task3dashboard">Task3 Dashboard</a></li>
+      
     </ul>
   </nav>
 </div>
@@ -39,7 +39,12 @@
 </div>
 <div class="container">
   <h3>Parent property in child component via @Input()</h3>
-  <app-task2 (message)="message=$event" [name]="name"></app-task2>
+  <form (ngSubmit)="sendUserData()" >
+    <label>First Name </label> <input class="form-control col-sm-4" [(ngModel)]="fname" type="name" name="fname" /><br/>
+    <label>Last Name </label> <input class="form-control col-sm-4" [(ngModel)]="lname" type="name" name="lname" /><br/> 
+    <button type="submit"  class="btn btn-success">Register</button>  
+  </form>
+  <app-task2 (message)="message=$event" [userData]="userData"></app-task2>
 </div>
 <h1>Hello {{message}}</h1>
 <footer class="footer bg-dark">

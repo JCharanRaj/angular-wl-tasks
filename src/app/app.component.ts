@@ -5,6 +5,7 @@ import { StudnetInterface} from './studnetInterface';
 import {Observable, of} from 'rxjs';
 import {SqrtPipe}from 'sqrt.pipe';
 import 'rxjs/add/operator/map';
+import {Router} from '@angular/router';
 import { HttpClient} from '@angular/common/http';
 
 @Component({
@@ -14,9 +15,9 @@ import { HttpClient} from '@angular/common/http';
 })
 export class AppComponent {
   
-  fname = "Wave";
-  lname = "Labs";
-  public name ="Task2 from App Component";
+  fname = "";
+  lname = "";
+  public userData =[];
   checkBox:boolean;
   taskDes:string;
   message="";
@@ -40,7 +41,11 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
   testService: TestService;
   students:[];
-  
+  sendUserData(){
+    this.userData.push({"firstName":this.fname, "lastName":this.lname});
+    console.log(this.userData);
+    this.router.n
+  }
   ngOnInit() {
        this.http.get("http://jsonplaceholder.typicode.com/users");
    }
